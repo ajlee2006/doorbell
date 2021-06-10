@@ -9,4 +9,4 @@ while True:
     msg = ser.read(ser.inWaiting()).decode()
     if msg != '':
         print("Ding dong")
-        os.system("aplay " + random.choice(ringtones))
+        os.system("aplay ringtones/" + random.choice(ringtones))
