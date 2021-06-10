@@ -3,7 +3,7 @@ import serial, os, random
 ser = serial.Serial('/dev/ttyUSB0',9600)
 ser.flushInput()
 
-ringtones = ['doorbell-twice.wav','eine-kleine.wav']
+ringtones = os.listdir('ringtones')
 
 while True:
     msg = ser.read(ser.inWaiting()).decode()
