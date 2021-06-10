@@ -1,2 +1,3 @@
-# doorbell
-Arduino/Python doorbell (for personal use)
+```
+python3 doorbellserial.py
+```
