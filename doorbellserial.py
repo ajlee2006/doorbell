@@ -10,4 +10,4 @@ while True:
     if msg != '':
         print("Ding dong")
         #os.system("aplay ringtones/" + random.choice(ringtones))
-        os.system("aplay ringtones/doorbell-four.wav")
+        os.system(random.choice("aplay ringtones/doorbell-four.wav","aplay ringtones/doorbell-six.wav"))
