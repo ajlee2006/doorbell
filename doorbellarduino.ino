@@ -5,7 +5,7 @@ int oldButtonState = 0;
 int change = 0;
 int timerOn = 0;
 int ctr = 0;
-int minCtr = 2;
+int minCtr = 1;
 int zCtr = 0;
 
 void setup() {
@@ -33,7 +33,10 @@ void loop() {
     timerOn = 0;
     digitalWrite(ledPin, LOW);
     if (ctr > minCtr) {
-      Serial.println(ctr);
+      for (int j=0; j<4; j++)
+        Serial.print(ctr);
+      Serial.println();
+      delay(200);
     } 
   }
 
@@ -43,11 +46,13 @@ void loop() {
     ctr = 0;
   }
   
-  delay(50);
   /*
   zCtr++;
   if (zCtr % 2 == 0){
     Serial.println(0);
     zCtr = 0;
-  }*/
+  }
+  */
+  delay(50);
+  Serial.flush(); /*required to prevent Raspberry Pi Python serial read error*/
 }
